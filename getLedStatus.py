@@ -5,7 +5,7 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(13, GPIO.OUT)
 
 while 1:
-    results = urllib2.urlopen('https://valyriansteel.github.io/iot/api.json').read()
+    results = urllib2.urlopen('https://valyriansteel.github.io/iot/led.json').read()
     status = json.loads(results)['led']
     if status == True:
         GPIO.output(13, GPIO.HIGH)
