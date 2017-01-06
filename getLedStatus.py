@@ -1,9 +1,4 @@
 import urllib2,json
-import RPi.GPIO as GPIO
-
-GPIO.cleanup()
-
-import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(13, GPIO.OUT)
@@ -15,3 +10,5 @@ while 1:
         GPIO.output(13, GPIO.HIGH)
     else:
         GPIO.output(13, GPIO.LOW)
+
+GPIO.cleanup()
