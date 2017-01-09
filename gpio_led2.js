@@ -4,7 +4,7 @@ var gpio = require("gpio");
 // mode : pullup (on-low, off-high), pulldn, float, pushpull, opendrain
 var LED_PIN_NUMBER = 27,
     LED_PIN_MODE = "pushpull",
-    SWITCH_PIN_NUMBER = 0,
+    SWITCH_PIN_NUMBER = 26,
     SWITCH_PIN_MODE = "pulldn";
 
 var SWITCH_ON = true,
@@ -34,7 +34,6 @@ gpio.on('open', function(pin, dir, mode) {
     gpio.write(pin, LED_OFF);
   }
 });
-
 gpio.on('release', function() {
   console.log('released');
 });
